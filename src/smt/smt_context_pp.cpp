@@ -353,9 +353,13 @@ namespace smt {
         out << "search-lvl:  " << m_search_lvl  << "\n";
         out << "inconsistent(): " << inconsistent() << "\n";
         out << "m_asserted_formulas.inconsistent(): " << m_asserted_formulas.inconsistent() << "\n";
+        out << "bool var defs: "<< "\n";
         display_bool_var_defs(out);
+        out << "enode defs: "<< "\n";
         display_enode_defs(out);
+        // out << "asserted_formulas: "<< "\n";
         display_asserted_formulas(out);
+        out << "binary clauses: "<< "\n";
         display_binary_clauses(out);
         if (!m_aux_clauses.empty()) {
             out << "auxiliary clauses:\n";
